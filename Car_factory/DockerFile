@@ -1,0 +1,10 @@
+# Folosim o imagine oficiala de Python
+FROM Python:3.11-slim
+
+# Setam folderul de lucru in container
+WORKDIR /app
+# Copiem toate fisierele din proiect in container
+COPY . .
+
+# Comanda care ruleaza aplicatia
+CMD ["python", "main.py"]
